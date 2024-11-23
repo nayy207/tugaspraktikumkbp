@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman HTML Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang!</h1>
+
+    <!-- Bagian Gambar -->
+    <section>
+        <!-- Gunakan placeholder image, bisa diganti dengan path lokal seperti "images/foto.jpg" -->
+        <img src="foto nay.jpg" alt=""
+        width="400" 
+        height="300">
+    </section>
+
+    <!-- Bagian Formulir -->
+    <section>
+        <h2>Formulir Pendaftaran</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+
+            <div class="form-group">
+                <label for="jenis_kelamin">Jenis Kelamin:</label>
+                <select id="jenis_kelamin" name="jenis_kelamin">
+                    <option value="">Pilih Jenis Kelamin</option>
+                    <option value="L">Laki-laki</option>
+                    <option value="P">Perempuan</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Kirim</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Bagian Tabel -->
+    <section>
+        <h2>Data Mahasiswa</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Jenis Kelamin</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Shofy Naila Az Zahra</td>
+                    <td>Perempuan</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Arham Athillah</td>
+                    <td>Laki-laki</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
