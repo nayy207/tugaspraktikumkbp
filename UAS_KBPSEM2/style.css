@@ -1,0 +1,269 @@
+/* CSS Variables */
+:root {
+    --dark-green: #051F20;
+    --green-1: #0B2B26;
+    --green-2: #163832;
+    --green-3: #235347;
+    --light-green-1: #8EB69B;
+    --light-green-2: #DAF1DE;
+    --dark-brown: #3E2A47;
+    --light-brown: #8EB69B;
+    --wood-brown: #6E4B3A;
+    --soft-beige: #D9C9A0;
+    --text-color: #FFFFFF;
+    --highlight-green: #235347;
+    --soft-yellow: #FFDB8A;
+    --contrast-text: #FFFAF0;
+    --emphasis-text: #FFE4C4;
+}
+
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Agu Display', sans-serif;
+    background-color: var(--dark-green);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh; /* Memastikan body mengambil tinggi penuh layar */
+    background-image: url('forest.jpg'); /* Use the correct path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+.header {
+    text-align: center;
+    background: rgba(11, 43, 38, 0.95); /* Adjusted to match color palette */
+    color: var(--light-green-2);
+    padding: 0;
+    margin-top: 0; /* Ubah dari 20px menjadi 0 agar header mentok ke atas */
+    margin-bottom: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Softer shadow effect */
+    border-radius: 10px;
+    font-family: 'Agu Display', sans-serif;
+}
+
+
+/* Flexbox container for layout */
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Menambahkan jarak bawah pada kontainer utama */
+}
+
+/* Container Style */
+.container {
+    background-color: rgba(11, 43, 38, 0.95); /* Adjusted transparency */
+    border: 2px solid var(--green-3);
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    text-align: center;
+    width: 350px; /* Unified width for all containers */
+    height: 450px; /* Unified height for all containers */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    backdrop-filter: blur(35%);
+    color: var(--contrast-text); /* High-contrast text */
+    line-height: 1.6; /* Improved line spacing */
+}
+
+.container:hover {
+    transform: scale(1.03);
+    background-color: rgba(35, 83, 71, 0.95); /* Adjusted hover effect */
+}
+
+h2 {
+    font-size: 38px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    color: var(--light-green-2);
+    font-family: 'Agu Display', sans-serif;
+}
+
+#timer {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: var(--contrast-text);
+    font-family: 'Agu Display', sans-serif;
+}
+
+button {
+    background-color: var(--green-2);
+    color: var(--contrast-text); /* Contrast for buttons */
+    border: 1px solid var(--light-green-1);
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    font-family: 'Agu Display', sans-serif;
+    flex: 1;
+}
+
+button:hover {
+    background-color: var(--green-3);
+    transform: scale(1.05);
+}
+
+/* Input Fields */
+input[type="number"], input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 3px;
+    border: 1px solid var(--green-3);
+    background-color: var(--green-2);
+    color: var(--contrast-text);
+    font-size: 25px;
+    outline: none;
+    transition: border 0.3s;
+    font-family: 'Agu Display', sans-serif;
+}
+
+input[type="number"], input[type="text"]:focus {
+    border: 1px solid var(--light-green-1);
+}
+
+#study-duration, #break-time {
+    font-size: 25px; /* Sesuaikan ukuran sesuai kebutuhan */
+    font-weight: bold; /* Opsional untuk menonjolkan teks */
+    font-family: 'Agu Display', sans-serif;
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure buttons stay in one row or wrap if needed */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-group button {
+    flex: 0 1 auto; /* Ensure buttons adjust size proportionally */
+    margin: 0;
+    max-width: 150px; /* Ensure consistent button size */
+}
+
+/* To-Do List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: var(--green-2);
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 5px;
+    color: var(--contrast-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* To-Do List Checkbox */
+li input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    accent-color: var(--dark-green);
+}
+
+/* Delete and Edit buttons for tasks */
+li button {
+    background-color: var(--green-1);
+    border: var(--green-1);
+    padding: 5px 10px; /* Smaller button size */
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--contrast-text);
+    font-size: 12px; /* Adjusted font size */
+    margin-left: 5px;
+    transition: background-color 0.3s;
+}
+
+li button:hover {
+    background-color: var(--green-2);
+}
+
+/* Status Text Styling */
+#spotify-status {
+    font-size: 18px;
+    margin-top: 15px;
+    color: var(--contrast-text);
+    line-height: 1.4;
+}
+
+/* Input Group Styling */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: var(--light-green-2);
+    font-family: 'Agu Display', sans-serif;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid var(--light-green-1);
+    border-radius: 5px;
+    background-color: var(--green-2);
+    color: var(--contrast-text);
+    font-family: 'Agu Display', sans-serif;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    background: rgba(11, 43, 38, 0.95); /* Adjusted to match color palette */
+    color: var(--light-green-2);
+    padding: 15px;
+    margin-top: 20px; /* Added space at the top */
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Softer shadow effect */
+    border-radius: 10px;
+}
+
+.header h1 {
+    margin: 10px;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--contrast-text);
+    font-family: 'Agu Display', sans-serif;
+}
+
+.header p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--soft-yellow);
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow for paragraph */
+    font-family: 'Agu Display', sans-serif;
+}
