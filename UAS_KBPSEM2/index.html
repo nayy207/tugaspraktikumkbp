@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Agu+Display:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Focus Space</h1>
+        <p>Disciplina est via ad libertatem; per tempus bene dispositum omnia possibilia fiunt</p>
+    </header>
+    <div class="wrapper">
+        <!-- Pomodoro Timer -->
+        <div class="container" id="pomodoro-timer">
+            <h2>Pomodoro Timer</h2>
+
+            <!-- Input Fields for Work Duration and Break Time -->
+            <div class="input-group">
+                <label for="pomodoro-duration">Study Duration:</label>
+                <input id="pomodoro-duration" class="small-input" type="number" placeholder="Enter duration">
+            </div>
+            <div class="input-group">
+                <label for="break-duration">Break Time:</label>
+                <input id="break-duration" class="small-input" type="number" placeholder="Enter break time">
+            </div>
+
+            <!-- Timer Display -->
+            <div id="timer">25:00</div>
+
+            <!-- Timer Controls -->
+            <div class="button-group">
+                <button id="start-button">Start</button>
+                <button id="save-button">Save</button>
+                <button id="reset-button">Reset</button>
+            </div>
+        </div>
+
+        <!-- Spotify Container -->
+        <div class="container" id="spotify-container">
+            <h2>Music n Chill</h2>
+            <div id="spotify-embed-container"></div>
+        </div>
+
+        <!-- To-Do List -->
+        <div class="container" id="todo-list-container">
+            <h2>To-Do List</h2>
+            <div class="input-group">
+                <input type="text" id="todo-input" placeholder="Enter task">
+            </div>
+            <div class="button-group">
+                <button id="add-task-button">Add Task</button>
+            </div>
+            <ul id="todo-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
